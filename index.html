@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शंभुराजे मल्टी-सर्व्हिसेस</title>
+    <link rel="stylesheet" href="shambhu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="shambhu.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <i class="fas fa-handshake"></i>
+            <div>
+                <h2>शंभुराजे मल्टी-सर्व्हिसेस</h2>
+                <p>आपले सरकार सेवा</p>
+            </div>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="active"><i class="fas fa-home"></i> मुख्यपृष्ठ</a></li>
+            <li><a href="#services"><i class="fas fa-concierge-bell"></i> सेवा</a></li>
+            <li><a href="#location"><i class="fas fa-map-marker-alt"></i> पत्ता</a></li>
+            <li><a href="#contact"><i class="fas fa-phone"></i> संपर्क</a></li>
+            <li><a href="https://wa.me/91YOUR_NUMBER" class="whatsapp-nav" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <h1>शंभुराजे मल्टी-सर्व्हिसेस</h1>
+            <p class="tagline">सर्व प्रकारच्या सरकारी व खाजगी सेवांचे एकमेव ठिकाण</p>
+            
+            <div class="services-paragraph">
+                <p class="bio">
+                    पॅन कार्ड नवीन/दुरूस्ती, शॉप ॲक्ट, उद्यम/उद्योग आधार, ड्रायव्हिंग लायसन्स, 
+                    आधार दुरूस्ती, मतदान दुरूस्ती व नवीन नोंदणी, राजपत्र (नावबदल, जन्मतारीख बदल), 
+                    एम्प्लॉयमेंट नोंदणी, आयुष्मान भारत कार्ड, ई-श्रम कार्ड, कलर झेरॉक्स, 
+                    ऑनलाईन प्रिंट्स, लॅमिनेशन, सर्व प्रकारचे स्कॉलरशिप फॉर्म, एज्युकेशन लोन फॉर्म, 
+                    सर्व शासकीय व निमशासकीय नोकरीचे फॉर्म, सर्व प्रकारचे बँकिंग फॉर्म, 
+                    रेल्वे व विमान तिकीट बुकिंग, पासपोर्ट सेवा, फूड लायसन्स, 
+                    पैसे पाठवणे इ. सर्व प्रकारचे ऑनलाईन कामे करून मिळतील.
+                </p>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">
+                    <i class="fas fa-list-check"></i> आमच्या सेवा पहा
+                </a>
+                <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Group मध्ये सामील व्हा
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- SERVICES -->
+<section id="services" class="services-section">
+    <div class="container">
+        <div class="section-header">
+            <h2><i class="fas fa-star"></i> आमच्या सेवा</h2>
+            <p class="section-subtitle">एकाच ठिकाणी सर्व प्रकारच्या सेवा</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="serviceSearch" placeholder="सेवा शोधा (उदा: पॅन कार्ड, आधार कार्ड)">
+                <button id="clearSearch" class="clear-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <p class="search-hint">कीवर्ड टाईप करा किंवा खाली सर्व सेवा पहा</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Government Services -->
+            <div class="service-category">
+                <h3 class="category-title">
+                    <i class="fas fa-landmark"></i> शासकीय सेवा
+                </h3>
+                
+                <div class="services-container">
+                    <!-- Pan Card -->
+                    <div class="service-card" data-service="pan">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>पॅन कार्ड</h4>
+                                <p>नवीन / दुरुस्ती / डुप्लीकेट</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('pan')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Aadhar Card -->
+                    <div class="service-card" data-service="aadhar">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-fingerprint"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>आधार कार्ड</h4>
+                                <p>दुरुस्ती / अपडेट / नवीन</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('aadhar')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Voter ID -->
+                    <div class="service-card" data-service="voting">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-id-badge"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>मतदार ओळखपत्र</h4>
+                                <p>नवीन / दुरुस्ती / स्थलांतर</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('voting')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Driving License -->
+                    <div class="service-card" data-service="dl">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>ड्रायव्हिंग लायसन्स</h4>
+                                <p>नवीन / रिन्युअल / डुप्लीकेट</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('dl')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Passport -->
+                    <div class="service-card" data-service="passport">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-passport"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>पासपोर्ट सेवा</h4>
+                                <p>नवीन / रिन्युअल / वेरिफिकेशन</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('passport')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Gazette -->
+                    <div class="service-card" data-service="gazette">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>राजपत्र सेवा</h4>
+                                <p>नावबदल / जन्मतारीख बदल</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('gazette')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Ayushman Bharat -->
+                    <div class="service-card" data-service="ayushman">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>आयुष्मान भारत</h4>
+                                <p>कार्ड निर्माण / अपडेट</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('ayushman')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- E-Shram -->
+                    <div class="service-card" data-service="eshram">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-hard-hat"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>ई-श्रम कार्ड</h4>
+                                <p>कामगार नोंदणी</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('eshram')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Udyam -->
+                    <div class="service-card" data-service="udyam">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>उद्योग आधार</h4>
+                                <p>MSME नोंदणी / अपडेट</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('udyam')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Shop Act -->
+                    <div class="service-card" data-service="shopact">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>शॉप ॲक्ट</h4>
+                                <p>दुकान नोंदणी</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('shopact')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Income Certificate -->
+                    <div class="service-card" data-service="income">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-file-certificate"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>आयप्रमाणपत्र</h4>
+                                <p>तहसीलदार कार्यालय</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('income')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Residence Certificate -->
+                    <div class="service-card" data-service="residence">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>निवास प्रमाणपत्र</h4>
+                                <p>रहिवासी दाखला</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('residence')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Caste Certificate -->
+                    <div class="service-card" data-service="caste">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>जातीचा दाखला</h4>
+                                <p>जात प्रमाणपत्र</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('caste')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Caste Validity -->
+                    <div class="service-card" data-service="caste_validity">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>जातीची वैधता</h4>
+                                <p>कॅस्ट व्हॅलिडिटी सर्टिफिकेट</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('caste_validity')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Non-Creamy Layer -->
+                    <div class="service-card" data-service="non_creamy">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>नॉन-क्रिमी लेयर</h4>
+                                <p>NCL प्रमाणपत्र</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('non_creamy')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Nationality Certificate -->
+                    <div class="service-card" data-service="nationality">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>राष्ट्रीयत्व प्रमाणपत्र</h4>
+                                <p>नेशनॅलिटी सर्टिफिकेट</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('nationality')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Domicile Certificate -->
+                    <div class="service-card" data-service="domicile">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>डोमिसाईल प्रमाणपत्र</h4>
+                                <p>मूळ निवासी दाखला</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('domicile')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- PF Form -->
+                    <div class="service-card" data-service="pf">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>पीएफ फॉर्म</h4>
+                                <p>प्रोव्हिडंट फंड</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('pf')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Food License -->
+                    <div class="service-card" data-service="food">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>फूड लायसन्स</h4>
+                                <p>अन्न परवाना</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('food')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Private Services -->
+            <div class="service-category">
+                <h3 class="category-title">
+                    <i class="fas fa-briefcase"></i> खाजगी व इतर सेवा
+                </h3>
+                
+                <div class="services-container">
+                    <!-- Scholarship -->
+                    <div class="service-card" data-service="scholarship">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>स्कॉलरशिप फॉर्म</h4>
+                                <p>सर्व प्रकारचे शिष्यवृत्ती फॉर्म</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('scholarship')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Education Loan -->
+                    <div class="service-card" data-service="loan">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>एज्युकेशन लोन</h4>
+                                <p>शैक्षणिक कर्ज अर्ज</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('loan')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Aadhar Payment -->
+                    <div class="service-card" data-service="aadhar_payment">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-money-bill-transfer"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>आधार क्रेडिट/डेबिट</h4>
+                                <p>पैसे पाठवणे / मिळवणे</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('aadhar_payment')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Bike Insurance -->
+                    <div class="service-card" data-service="bike_insurance">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-motorcycle"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>बाइक इन्शुरन्स</h4>
+                                <p>द्विचाकी विमा</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('bike_insurance')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Car Insurance -->
+                    <div class="service-card" data-service="car_insurance">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-car-alt"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>कार इन्शुरन्स</h4>
+                                <p>चारचाकी विमा</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('car_insurance')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Banking Forms -->
+                    <div class="service-card" data-service="bank">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>बँकिंग फॉर्म</h4>
+                                <p>सर्व प्रकारचे बँक फॉर्म</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('bank')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Job Forms -->
+                    <div class="service-card" data-service="job">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>नोकरी फॉर्म</h4>
+                                <p>सरकारी / खाजगी नोकरी</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('job')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Railway Ticket -->
+                    <div class="service-card" data-service="rail">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-train"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>रेल्वे तिकीट</h4>
+                                <p>बुकिंग / कॅन्सल / चार्ट</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('rail')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Flight Ticket -->
+                    <div class="service-card" data-service="flight">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>विमान तिकीट</h4>
+                                <p>डोमेस्टिक / इंटरनॅशनल</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('flight')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+
+                    <!-- Printing Service -->
+                    <div class="service-card" data-service="printing">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-print"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>प्रिंटिंग सेवा</h4>
+                                <p>झेरॉक्स / लॅमिनेशन / फोटो</p>
+                            </div>
+                        </div>
+                        <button class="docs-btn" onclick="showServiceDocs('printing')">
+                            <i class="fas fa-file-alt"></i> कागदपत्रे पहा
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Documents Modal -->
+<div class="modal" id="docModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 id="modalTitle">कागदपत्रे</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="documents-list" id="documentsList">
+                <!-- Documents will be inserted here -->
+            </div>
+            <div class="modal-footer">
+                <p><i class="fas fa-info-circle"></i> सर्व कागदपत्रे मूळ व फोटोकॉपी आणावी.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- LOCATION & CONTACT -->
+<section id="location" class="location-section">
+    <div class="container">
+        <div class="section-header">
+            <h2><i class="fas fa-map-marker-alt"></i> आमचं ठिकाण</h2>
+            <p class="section-subtitle">भेट द्या किंवा संपर्क साधा</p>
+        </div>
+
+        <div class="location-grid">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>दुकान पत्ता</h3>
+                    <p>गजानन नगर, गल्ली no १ ० </p>
+                    <p>शिवनेरी चौक , गारखेडा परिसर </p>
+                    <p> छत्रपती संभाजीनगर, ४ ३ १ ० ० १</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>वेळ</h3>
+                    <p><strong>सोम - शनि:</strong> सकाळी १० - संध्याकाळी ८</p>
+                    <p><strong>रविवार:</strong> सकाळी १० - दुपारी २</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>संपर्क</h3>
+                    <p><strong>मोबाईल:</strong> +९१ ९८७६५ ४३२१०</p>
+                    <p><strong>ईमेल:</strong> info@multiservice.com</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp Group</h3>
+                    <p>सेवा अपडेट्स व माहितीसाठी</p>
+                    <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK" class="whatsapp-group-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Group मध्ये जॉईन करा
+                    </a>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/place/Street+No.+10,+Husain+Colony,+Nyay+Nagar,+Chhatrapati+Sambhajinagar,+Maharashtra+431009/@19.8685715,75.3571722,114m/data=!3m1!1e3!4m15!1m8!3m7!1s0x3bdba28f204dc085:0xc6a14386aa4b1c85!2sStreet+No.+10,+Husain+Colony,+Nyay+Nagar,+Chhatrapati+Sambhajinagar,+Maharashtra+431009!3b1!8m2!3d19.8686616!4d75.357441!16s%2Fg%2F11qpxl_ryf!3m5!1s0x3bdba28f204dc085:0xc6a14386aa4b1c85!8m2!3d19.8686616!4d75.357441!16s%2Fg%2F11qpxl_ryf?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-handshake"></i>
+                    <div>
+                        <h3>मल्टी सर्व्हिस सेंटर</h3>
+                        <p>व्यावसायिक सेवा केंद्र</p>
+                    </div>
+                </div>
+                <p class="footer-about">सर्व प्रकारच्या सरकारी व खाजगी सेवा</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>द्रुत लिंक</h4>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-chevron-right"></i> मुख्यपृष्ठ</a></li>
+                    <li><a href="#services"><i class="fas fa-chevron-right"></i> सेवा</a></li>
+                    <li><a href="#location"><i class="fas fa-chevron-right"></i> पत्ता</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>लोकप्रिय सेवा</h4>
+                <ul>
+                    <li><a href="#services" onclick="showServiceDocs('pan')"><i class="fas fa-check"></i> पॅन कार्ड</a></li>
+                    <li><a href="#services" onclick="showServiceDocs('aadhar')"><i class="fas fa-check"></i> आधार कार्ड</a></li>
+                    <li><a href="#services" onclick="showServiceDocs('dl')"><i class="fas fa-check"></i> ड्रायव्हिंग लायसन्स</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>संपर्क माहिती</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-phone"></i> 88888888</li>
+                    <li><i class="fas fa-map-marker-alt"></i> गजानन नगर, गल्ली no १ ० ,शिवनेरी चौक , गारखेडा परिसर , छत्रपती संभाजीनगर, ४ ३ १ ० ० १ </li>
+                    <li><i class="fas fa-clock"></i> सकाळी १० - संध्याकाळी ८</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear">२०२४</span> शंभुराजे मल्टी-सर्व्हिसेस. सर्व हक्क राखीव.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/91YOUR_NUMBER" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/91YOUR_NUMBER" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
